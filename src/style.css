@@ -1,0 +1,20 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: white;
+  background: #111827;
+  touch-action: none;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #game {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#game canvas {
+  display: block;
+  margin: auto;
+}
