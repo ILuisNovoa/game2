@@ -1,11 +1,13 @@
 import Phaser from 'phaser';
 
+const assetUrl = (file) => `${import.meta.env.BASE_URL}assets/${file}`;
+
 export class MenuScene extends Phaser.Scene {
   constructor() { super('menu'); }
 
   preload() {
-    this.load.image('luis-pixel', '/assets/luis-pixel.png');
-    this.load.image('macheila-pixel', '/assets/macheila-pixel.png');
+    this.load.image('luis-pixel', assetUrl('luis-pixel.png'));
+    this.load.image('macheila-pixel', assetUrl('macheila-pixel.png'));
   }
 
   create() {

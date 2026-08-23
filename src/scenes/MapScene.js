@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
 
+const assetUrl = (file) => `${import.meta.env.BASE_URL}assets/${file}`;
+
 export class MapScene extends Phaser.Scene {
   constructor() { super('map'); }
 
@@ -8,10 +10,10 @@ export class MapScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('map-luis', '/assets/luis-pixel.png');
-    this.load.image('map-macheila', '/assets/macheila-pixel.png');
-    this.load.image('map-gamer', '/assets/luis-gamer-background.png');
-    this.load.image('map-medical', '/assets/medical-background.png');
+    this.load.image('map-luis', assetUrl('luis-pixel.png'));
+    this.load.image('map-macheila', assetUrl('macheila-pixel.png'));
+    this.load.image('map-gamer', assetUrl('luis-gamer-background.png'));
+    this.load.image('map-medical', assetUrl('medical-background.png'));
   }
 
   create() {

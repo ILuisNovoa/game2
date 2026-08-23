@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
 
+const assetUrl = (file) => `${import.meta.env.BASE_URL}assets/${file}`;
+
 export class LevelScene extends Phaser.Scene {
   constructor() { super('level'); }
 
@@ -13,19 +15,19 @@ export class LevelScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('gamer-bg', '/assets/luis-gamer-background.png');
-    this.load.image('luis-pixel', '/assets/luis-pixel.png');
-    this.load.image('macheila-pixel', '/assets/macheila-pixel.png');
-    this.load.image('luis-game', '/assets/luis-game-sprite.png');
-    this.load.image('macheila-game', '/assets/macheila-game-sprite.png');
-    this.load.image('luis-walk', '/assets/luis-game-walk.png');
-    this.load.image('macheila-walk', '/assets/macheila-game-walk.png');
-    this.load.image('enemy-skeleton', '/assets/enemy-skeleton.png');
-    this.load.image('enemy-zombie', '/assets/enemy-zombie.png');
-    this.load.image('kiro-guide', '/assets/kiro-guide.png');
-    this.load.image('medical-bg', '/assets/medical-background.png');
-    this.load.image('baby-cradle', '/assets/baby-cradle.png');
-    this.load.image('enemy-virus', '/assets/enemy-virus.png');
+    this.load.image('gamer-bg', assetUrl('luis-gamer-background.png'));
+    this.load.image('luis-pixel', assetUrl('luis-pixel.png'));
+    this.load.image('macheila-pixel', assetUrl('macheila-pixel.png'));
+    this.load.image('luis-game', assetUrl('luis-game-sprite.png'));
+    this.load.image('macheila-game', assetUrl('macheila-game-sprite.png'));
+    this.load.image('luis-walk', assetUrl('luis-game-walk.png'));
+    this.load.image('macheila-walk', assetUrl('macheila-game-walk.png'));
+    this.load.image('enemy-skeleton', assetUrl('enemy-skeleton.png'));
+    this.load.image('enemy-zombie', assetUrl('enemy-zombie.png'));
+    this.load.image('kiro-guide', assetUrl('kiro-guide.png'));
+    this.load.image('medical-bg', assetUrl('medical-background.png'));
+    this.load.image('baby-cradle', assetUrl('baby-cradle.png'));
+    this.load.image('enemy-virus', assetUrl('enemy-virus.png'));
   }
 
   create() {
