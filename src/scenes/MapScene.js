@@ -33,7 +33,7 @@ export class MapScene extends Phaser.Scene {
     });
     this.add.text(480, 265, '➜', { fontSize: '48px', color: completed ? '#a78bfa' : '#64748b' }).setOrigin(0.5);
     this.levelCard(650, 270, 'NIVEL 2', isLuis ? 'Mundo desconocido' : 'Nueva emergencia', completed, false, () => {
-      this.showNotice('Nivel 2 desbloqueado · será la próxima aventura');
+      this.scene.start('level', { character: this.character, level: 2 });
     });
 
     this.add.text(30, 485, '← Cambiar personaje', {
